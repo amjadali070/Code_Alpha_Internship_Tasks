@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi-Page Survey</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="survey-container">
+    <form id="survey-form">
+      <div class="page" id="page1">
+        <h1>Page 1</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <button type="button" onclick="nextPage(2)">Next</button>
+      </div>
+      <div class="page" id="page2">
+        <h1>Page 2</h1>
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age">
+        <button type="button" onclick="prevPage(1)">Previous</button>
+        <button type="button" onclick="nextPage(3)">Next</button>
+      </div>
+      <div class="page" id="page3">
+        <h1>Page 3</h1>
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback"></textarea>
+        <button type="button" onclick="prevPage(2)">Previous</button>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
