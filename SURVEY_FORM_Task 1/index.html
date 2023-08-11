@@ -1,41 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Multi-Page Survey Form</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="author" content="Alkaison">
+    <meta name="description" content="Simple Survey Webpage for Web Developers">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="container my-5">
-    <form id="survey-form">
-      <div class="page" id="page1">
-        <h1>Welcome to Our Survey</h1>
-        <div class="mb-3">
-          <label for="name" class="form-label">Name:</label>
-          <input type="text" id="name" name="name" class="form-control">
-        </div>
-        <button type="button" class="btn btn-primary" onclick="nextPage(2)">Next</button>
-      </div>
-      <div class="page" id="page2">
-        <h1>Just a Little More</h1>
-        <div class="mb-3">
-          <label for="age" class="form-label">Age:</label>
-          <input type="text" id="age" name="age" class="form-control">
-        </div>
-        <button type="button" class="btn btn-secondary" onclick="prevPage(1)">Previous</button>
-        <button type="button" class="btn btn-primary" onclick="nextPage(3)">Next</button>
-      </div>
-      <div class="page" id="page3">
-        <h1>Share Your Thoughts</h1>
-        <div class="mb-3">
-          <label for="feedback" class="form-label">Feedback:</label>
-          <textarea id="feedback" name="feedback" class="form-control"></textarea>
-        </div>
-        <button type="button" class="btn btn-secondary" onclick="prevPage(2)">Previous</button>
-        <button type="submit" class="btn btn-success">Submit</button>
-      </div>
-    </form>
+    <!-- Create Form -->
+<form id="form" name="survey-form">
+
+    <!-- Details -->
+    <div class="form-control">
+        <label for="name" id="label-name">
+            Name:
+        </label>
+
+        <!-- Input Type Text -->
+        <input type="text"
+               id="name"
+               placeholder="Enter your name" />
+    </div>
+
+    <div class="form-control">
+        <label for="email" id="label-email">
+            Email:
+        </label>
+
+        <!-- Input Type Email-->
+        <input type="email"
+               id="email"
+               placeholder="Enter your email" />
+    </div>
+
+    <div class="form-control">
+        <label for="age" id="label-age">
+            Age:
+        </label>
+
+        <!-- Input Type Text -->
+        <input type="text"
+               id="age"
+               placeholder="Enter your age" />
+    </div>
+
+    <div class="form-control">
+        <label for="role" id="label-role">
+            Which option best describes you?
+        </label>
+         
+        <!-- Dropdown options -->
+        <select name="role" id="role">
+            <option value="student">Student</option>
+            <option value="intern">Intern</option>
+            <option value="professional">Professional</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <div class="form-control">
+        <label>
+            Would you recommend Web Development to a friend?
+        </label>
+
+        <!-- Input Type Radio Button -->
+        <label for="recommed-1">
+            <input type="radio"
+                   id="recommed-1"
+                   name="recommed">Yes</input>
+        </label>
+        <label for="recommed-2">
+            <input type="radio"
+                   id="recommed-2"
+                   name="recommed">No</input>
+        </label>
+        <label for="recommed-3">
+            <input type="radio"
+                   id="recommed-3"
+                   name="recommed">Maybe</input>
+        </label>
+    </div>
+
+    <div class="form-control">
+        <label>Languages and Frameworks known
+            <small>(Check all that apply)</small>
+        </label>
+        <!-- Input Type Checkbox -->
+        <label for="inp-1">
+            <input type="checkbox"
+                   name="inp">HTML</input></label>
+        <label for="inp-2">
+            <input type="checkbox"
+                   name="inp">CSS</input></label>
+        <label for="inp-3">
+            <input type="checkbox"
+                   name="inp">JavaScript</input></label>
+        <label for="inp-4">
+            <input type="checkbox"
+                   name="inp">React.js</input></label>
+        <label for="inp-5">
+            <input type="checkbox"
+                   name="inp">Angular</input></label>
+        <label for="inp-6">
+            <input type="checkbox"
+                   name="inp">Django</input></label>
+        <label for="inp-7">
+            <input type="checkbox"
+                   name="inp">Node.js</input></label>
+        <label for="inp-7">
+            <input type="checkbox"
+                   name="inp">Git</input></label>
+        <label for="inp-7">
+            <input type="checkbox"
+                   name="inp">Mongo DB</input></label>
+        <label for="inp-7">
+            <input type="checkbox"
+                   name="inp">Express.js</input></label>
+    </div>
+
+    <div class="form-control">
+        <label for="comment">
+            Any comments or suggestions
+        </label>
+
+        <!-- multi-line text input control -->
+        <textarea name="comment" id="comment" rows="5" placeholder="Enter your comment here"></textarea>
+    </div>
+    <!-- Multi-line Text Input Control -->
+
+    <div class="wrapper">
+      <button type="submit" value="submit">Submit</button>
   </div>
-  <script src="script.js"></script>
+    
+</form>
 </body>
 </html>
